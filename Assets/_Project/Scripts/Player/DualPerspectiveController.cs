@@ -67,7 +67,7 @@ public class DualPerspectiveController : MonoBehaviour
         // Hide capsule mesh in 1st-person so it never blocks the lens
         foreach (var r in firstPersonHiddenRenderers)
         {
-            if (r != null) r.enabled = !_isFirstPerson;
+            if (r != null) r.enabled = _isFirstPerson;
         }
 
         // Snap player facing direction to camera yaw when entering 1st-person
